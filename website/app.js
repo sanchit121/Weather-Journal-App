@@ -64,5 +64,5 @@ const performAction = () => {
 };
 
 // Create an event listener for the element with the id:
-//  generate, with a callback function to execute when it is clicked.
+// generate, with a callback function to execute when it is clicked.
 document.getElementById("generate").addEventListener("click", performAction);
