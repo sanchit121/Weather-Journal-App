@@ -30,10 +30,11 @@ function listening() {
   console.log(`running on localhost: ${port}`);
 }
 
-app.get("getAll", function (req, res) {
-  return projectData;
+app.get("/getAll", function (req, res) {
+  return res.send(projectData);
 });
 
-app.post("createData", function (req, res) {
-  return post.data.push(req.body);
+app.post("/createData", function (req, res) {
+  console.log(req.body);
+  projectData = req.body;
 });
