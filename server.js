@@ -29,3 +29,11 @@ function listening() {
   // console.log(server);
   console.log(`running on localhost: ${port}`);
 }
+
+app.get("getAll", function (req, res) {
+  return projectData;
+});
+
+app.post("createData", function (req, res) {
+  return post.data.push(req.body);
+});
